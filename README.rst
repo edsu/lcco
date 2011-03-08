@@ -23,7 +23,7 @@ Python and rdflib and steps 2 and 3 are not necessary.
 2. adjust the LCCO Namespace appropriately in skosify.py
 3. ./skosify.py > lcco.rdf
 4. create a MySQL database and adjust settings.php appropriately
-3. php -e load.php 
+5. php -e load.php 
 
 License
 =======
