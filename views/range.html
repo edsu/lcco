@@ -1,0 +1,29 @@
+<div> 
+
+<a href="<?= $range ?>" id="<?= $range ?>"
+    onclick="$(this).next().toggle(); return false;">
+    <?= $range ?>
+</a>
+- 
+<?= $pref_label ?>
+
+<div class="ranges">
+
+<?php 
+foreach ($ranges as $range) {
+?>
+
+<div class="range" id="<?= $range['notation'] ?>">
+    <a href="<?= $range['notation'] ?>" onclick="$(this).parent().load('<?=
+        $range['notation'] ?>'); return false;"><?= $range['notation'] ?></a>
+    - 
+    <?= $range['pref_label'] ?>
+</div>
+
+<?php 
+} 
+?>
+
+</div>
+
+</div>

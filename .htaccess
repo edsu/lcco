@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule ^$ index.php?action=outline
+RewriteRule ^([A-Z0-9\.\-]+)$ index.php?action=range&range=$1

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Library of Congress Classification Outline</title>
+        <script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica" rel="stylesheet" type="text/css"> 
+
+
+        <script type="text/javascript">
+
+        function setup(e) {
+            $('#outline a').click(function() {
+                div = $(this).parent();
+                $(this).parent().load($(this).attr('id'));
+                return false;
+            });
+        }
+ 
+        $(document).ready(setup)
+
+        </script>
+
+    </head>
+    <body>
+
+    <a href="http://github.com/edsu/lcco"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a> 
+
+    <h1>Library of Congress Classification Outline</h1>
+
+    <div id="outline">
+
+    <?php
+    foreach ($rows as $row) {
+    ?>
+
+        <div>
+            <a href="<?= $row['range'] ?>" id="<?= $row['range'] ?>">
+               <?= $row['range'] ?>
+            </a>
+            - 
+            <?= $row['pref_label'] ?>
+
+        </div>
+
+    <?php
+    }
+    ?>
+
+    </div>
+    
+    <p>
+    This outine view of the LCC was generated from a <a
+        href="http://www.archive.org/details/LcClassificationA-z">tab delimited
+        text file</a> that <a href="http://www.kcoyle.net/">Karen Coyle</a> uploaded to the Internet Archive, which
+    in turn was scraped from the PDF outline files at the Library of Congress. 
+    The code for this application is <a
+        href="http://inkdroid.org/bzr/lcco">available</a> as is the <a
+        href="http://inkdroid.org/bzr/lcco/lcco.rdf">SKOS RDF</a>
+    data that drives it--which was derived from the original text file.
+    </p>
+    <p>
+    Questions, comments, quibbles to <em>ehs at pobox dot com</em>. 
+    </p>
+
+</body>
+
+</html>

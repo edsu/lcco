@@ -1,0 +1,16 @@
+body {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    font-size: 14pt;
+    font-family: 'IM Fell DW Pica', helvetica;
+}
+
+a {
+    text-decoration: none;
+}
+
+.range {
+    margin-left: 20px;
+    font-size: 12pt;
+}
