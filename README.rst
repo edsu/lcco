@@ -6,8 +6,7 @@ This minimal project converts a visually hierarhical text representation
 (lc_class.txt) of the Library of Congress Classification Outline (`scraped
 <http://www.archive.org/details/LcClassificationA-z>`_ 
 from PDFs by Karen Coyle) to SKOS RDF (lcco.rdf). 
-The SKOS RDF is then published on the Web using "PHP's ARC2
-<http://arc.semsol.org/>"_.
+The SKOS RDF is then published on the Web using `PHP's ARC2 <http://arc.semsol.org/>`_.
 
 Since Python is used to convert the text file to RDF, and PHP is used to 
 publish the RDF, lcco is also a little demonstration of how RDF can be 
